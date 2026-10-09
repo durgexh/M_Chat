@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none">
+  <rect width="512" height="512" rx="128" fill="#0a0c10"/>
+  <rect x="24" y="24" width="464" height="464" rx="104" stroke="#1e293b" stroke-width="4"/>
+  <!-- Radio Wave Rings -->
+  <circle cx="256" cy="256" r="180" stroke="#10b981" stroke-opacity="0.15" stroke-width="6" stroke-dasharray="16 12"/>
+  <circle cx="256" cy="256" r="130" stroke="#10b981" stroke-opacity="0.3" stroke-width="6"/>
+  <circle cx="256" cy="256" r="80" stroke="#10b981" stroke-opacity="0.6" stroke-width="6"/>
+  <!-- Central Mesh Node -->
+  <circle cx="256" cy="256" r="36" fill="#10b981"/>
+  <!-- Bluetooth Rune Icon In Center -->
+  <path d="M256 220 L276 238 L256 256 L276 274 L256 292 V220 L240 234 M256 256 L240 270" stroke="#0a0c10" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Satellite Nodes -->
+  <circle cx="140" cy="180" r="14" fill="#38bdf8"/>
+  <line x1="150" y1="190" x2="230" y2="242" stroke="#38bdf8" stroke-opacity="0.4" stroke-width="3"/>
+  <circle cx="370" cy="190" r="14" fill="#38bdf8"/>
+  <line x1="358" y1="200" x2="280" y2="244" stroke="#38bdf8" stroke-opacity="0.4" stroke-width="3"/>
+  <circle cx="210" cy="370" r="14" fill="#38bdf8"/>
+  <line x1="218" y1="356" x2="248" y2="286" stroke="#38bdf8" stroke-opacity="0.4" stroke-width="3"/>
+</svg>

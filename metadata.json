@@ -1,0 +1,8 @@
+{
+  "name": "BitChat Mesh - Serverless P2P Radio",
+  "description": "Decentralized peer-to-peer messaging using local wireless signals, Bluetooth mesh discovery, and zero-server encrypted group chats with QR code verification.",
+  "requestFramePermissions": [
+    "camera"
+  ],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
