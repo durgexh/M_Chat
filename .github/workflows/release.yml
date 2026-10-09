@@ -3,6 +3,9 @@ name: Build and Publish Release
 on:
   release:
     types: [published]
+  push:
+    tags:
+      - 'v*'
   workflow_dispatch:
 
 permissions:
@@ -22,22 +25,25 @@ jobs:
           node-version: 22
 
       - name: Install Dependencies
-        run: npm install --legacy-peer-deps
+        run: npm install
 
       - name: Build MChat PWA
         run: npm run build
 
       - name: Archive Production Build
         run: |
-          cd dist
-          zip -r ../mchat-pwa-release.zip .
-          cd ..
+          python3 -m zipfile -c mchat-pwa-release.zip dist
 
-      - name: Upload Release Asset
+      - name: Upload Artifact to GitHub Actions
+        uses: actions/upload-artifact@v4
+        with:
+          name: mchat-pwa-release
+          path: mchat-pwa-release.zip
+
+      - name: Upload Release Asset (On Release or Tag)
         uses: softprops/action-gh-release@v2
-        if: startsWith(github.ref, 'refs/tags/') || github.event_name == 'release'
+        if: github.event_name == 'release' || startsWith(github.ref, 'refs/tags/')
         with:
           files: mchat-pwa-release.zip
-          tag_name: ${{ github.event.release.tag_name }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
